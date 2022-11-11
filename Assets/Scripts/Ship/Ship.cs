@@ -76,7 +76,8 @@ public class Ship : MonoBehaviour
             SceneManager.LoadScene(2);
 
         }
-    
+        
+        //Aktiverar flash när man blir träffad -Simon
         if (col.tag == "Enemy")
         {
             screenFlash.flash = true;

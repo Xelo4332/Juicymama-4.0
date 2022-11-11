@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Av Simon
 public class Screen_Flash : MonoBehaviour
 {
     private SpriteRenderer sprite;
@@ -20,27 +20,31 @@ public class Screen_Flash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Gör så att skärmen flashar när man trycker på J
         if (Input.GetKeyDown(KeyCode.J))
         {
             flash = true;
         }
         
+        //Återställer durationCounter och gör boolen flash till false 
         if (flash)
         {
             durationCounter = duration;
             flash = false;
         }
 
+        //När duration är större än noll så blir objectet rött. Objectets Alpha beror på % tid kvar av durationCounter
         if (durationCounter > 0)
         {
             durationCounter -= Time.deltaTime;
-            sprite.color = new Color(255, 255, 255, durationCounter / duration);
+            sprite.color = new Color(255, 0, 0, durationCounter / duration);
 
 
         }
+        //Gör objectet osynligt
         else
         {
-            sprite.color = new Color(255, 255, 255, (0));
+            sprite.color = new Color(255, 0, 0, 0);
 
         }
         
