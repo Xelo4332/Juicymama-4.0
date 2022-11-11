@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RoundSettings : MonoBehaviour
-{
+{//Deni
     public event Action<int> OnRoundTimeChanged;
     [SerializeField] private int _roundTime;
     [SerializeField] private int _highScoreSceneIndex;
