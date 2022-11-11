@@ -16,6 +16,7 @@ public class Enemy : SpawnObjects
     {
         base.Start();
         _player = FindObjectOfType<Ship>();
+        //Wilmers del
         sc = FindObjectOfType<ShakeBehavior>();
     }
 
@@ -24,7 +25,9 @@ public class Enemy : SpawnObjects
     {
         if (col.TryGetComponent(out Bullet bullet))
         {
+            //Wilmers del
             sc.TriggerShake();
+            //
             AudioManager.Instance.PlaySound(_onDestroySound);
             _player.OnEnemyKill();
             Instantiate(Effect, transform.position, Quaternion.identity);

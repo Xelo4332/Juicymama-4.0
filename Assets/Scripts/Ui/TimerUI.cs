@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class TimerUI : MonoBehaviour
-{
+{//Deni
     [SerializeField] private Text _timerText;
     private RoundSettings _roundSettings;
     //We will find our script with help of generic code.
