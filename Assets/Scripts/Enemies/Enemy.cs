@@ -16,7 +16,7 @@ public class Enemy : SpawnObjects
     {
         base.Start();
         _player = FindObjectOfType<Ship>();
-        //Wilmers del
+        //Wilmers del coden komemr leta objekten som har ShakeBehavior script.
         sc = FindObjectOfType<ShakeBehavior>();
     }
 
@@ -25,7 +25,7 @@ public class Enemy : SpawnObjects
     {
         if (col.TryGetComponent(out Bullet bullet))
         {
-            //Wilmers del
+            //Wilmers del Aktiverar scenne shake
             sc.TriggerShake();
             //
             AudioManager.Instance.PlaySound(_onDestroySound);

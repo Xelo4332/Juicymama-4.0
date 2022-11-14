@@ -6,7 +6,7 @@ public class ShipMovementController
     //We will use our rigidbody to move our ship, with help of readonly our variable going to be secured.
     private readonly Rigidbody _rigidBody;
 
-    
+    //We will make our rigidbody open to other scripts, but the orignal variable going to be closed or private.
     public ShipMovementController(Rigidbody rigidbody)
     {
         _rigidBody = rigidbody;
